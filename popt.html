@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/comm.css">
+  <link href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/layer/3.1.0/mobile/layer.js"></script>
+  <link rel="stylesheet" href="./css/datepicker.css">
+  <script id="select-date" type="text/html">
+    <i class="close-btn" id="select-date-closebtn"></i>
+    <div class="date-form bgc292f37 text-center cabinet-auto" id="datepicker">
+      <div class="input-box">
+        <input class="text-center" type="text" role="datepicker" placeholder="开始日期" value="">
+        <span>至</span>
+        <input class="text-center" type="text" role="datepicker" placeholder="结束日期">
+      </div>
+      <div class="date-scroll">
+        <div class="item datepicker-year" id="year">
+          <ul class="box">
+            <!-- <div class="col">2016</div>
+            <div class="col">2016</div>
+            <div class="col">2016</div>
+            <div class="col">2016</div> -->
+          </ul>
+        </div>
+        <div class="item datepicker-month" id="month">
+          <ul class="box">
+            <!-- <div class="col">2016</div>
+            <div class="col">2016</div>
+            <div class="col">2016</div>
+            <div class="col">2016</div> -->
+          </ul>
+        </div>
+        <div class="item datepicker-day" id="day">
+          <ul class="box">
+            <!-- <div class="col">2016</div>
+            <div class="col">2016</div>
+            <div class="col">2016</div>
+            <div class="col">2016</div> -->
+          </ul>
+        </div>
+      </div>
+      <div class="btn" id="select-date-btn">
+        <div class="button yes">确定</div>
+        <div class="button no">取消</div>
+      </div>
+    </div>
+  </script>
+</head>
+<body>
+<script src="./js/datepicker.js"></script>
+<script>
+  function poptDate() {
+    var dateHtml = $('#select-date').html();
+    var index = layer.open({
+      type: 1,
+      title: [
+        '选择时间',
+        'background-color: transparent; color:#fff;line-height: .8rem;font-size: .36rem;height: .8rem'
+      ],
+      style: 'border:none;background-color: #292f37; color:#687079;box-sizing: border-box;font-size: .36rem;',
+      content: dateHtml,
+      className: 'select-date'
+    });
+    return index;
+  }
+  $.when(poptDate()).done(function(index){
+    $('#select-date-closebtn').on('click', function () {
+      layer.close(index) // X
+    })
+    $('#select-date-btn').on('touchend', '.button', function (e) {
+      var target = e.target
+      if($(target).hasClass('yes')){
+        console.log('ok') // 确定
+      } else if ($(target).hasClass('no')) {
+        layer.close(index) // 取消
+      }
+    })
+    selectDateInit() // 可传参数，替换默认的参数 例如：selectDateInit({year: { start: 2000, end: 2020 }})
+    /* defaults = {
+      year: { start: 1900, end: 2020 },
+      month: { start: 1, end: 12 },
+      day: { start: 1, end: 31 },
+      opened: false,
+      smoothScroll: true
+    }; */
+  })
+
+</script>
+</body>
+</html>

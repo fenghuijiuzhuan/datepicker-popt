@@ -1,0 +1,52 @@
+@charset "utf8";
+/**
+* @Author: GYF
+* @Date:   2018-08-27 15:52:22
+* @Email: fenghuijiuzhuan@163.com
+* @Hello: The world will be changed by us
+*/
+
+body{min-height: 100vh;background-color: #1d232b}
+.bgc292f37{background-color: #292f37}
+.mt20{margin-top: .2rem}
+.mb20{margin-bottom: .2rem}
+.cabinet-auto{padding-left: .3rem;padding-right: .3rem}
+* { touch-action: pan-y; } 
+/* select */
+.nav-select{border-bottom: 1px solid #434b56;font-size: .28rem;display: flex;justify-content: space-between;align-items: center;}
+.nav-select .item{padding: 0 .3rem;height: .72rem;display: flex;justify-content: space-between;align-items: center;border-right: 1px solid #434b56;flex: auto;width: 100%}
+.nav-select .item img{width: .21rem;height: 0.1rem;}
+.nav-select .item.on img{-webkit-transform: rotate(180deg);transform: rotate(180deg)}
+.nav-select .item.date{flex-shrink: 0;width: 1.4rem;justify-content: center;}
+.nav-select .item.date img{width: .31rem;height: .3rem;}
+/* select end */
+/* data list  */
+.data-list{font-size: .28rem;line-height: .4rem}
+.data-list .item{display: block;margin-top: .1rem;padding-top: .3rem;padding-bottom: .3rem;}
+/* data list end */
+/* jk-view */
+.jk-view{color: #feffff;font-size: .28rem;}
+.jk-view .item{padding: .3rem 0;margin-bottom: .5rem}
+.jk-view .item .title{border-left: .04rem solid #02cdb2;height: .24rem;display: flex;align-items: center;padding-left: .2rem;}
+.jk-view .item .view{width: 6.6rem;height: 2.34rem;margin-top: .44rem;background-color: #fff;}
+/* jk-view end */
+/* select date */
+.select-date{width: 6.88rem;height: 6.72rem;position: relative;}
+.select-date .close-btn{position: absolute;top: .2rem;right: .5rem;width: .6rem;height: .6rem;background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAACFElEQVRIia3XPWtUQRQG4EnUCBG1MaBoIyksJKIoWIlg43cqv8AfoDYigoIWWqTwF0SCjRLRJqjkB4hVIJWinYiNKcRCVCRFyLqPxWZhWe6cuXfJgWl2z/sxd+47MzfhsbheYQhpgDGE1wH3dMIGzBdM3B/QwFTA+Rabuo1b8SlobuFkQ/HLaGf4vmAHUi9gD5YCEz+xt6b4YSxneH5jf7e3H3ggAMIHjBbEdwYTaeFcb38VweRaY65mA/HNWAywd/sxOaIbAQnczOBmA8zzKkz0KKcDshUc6+u/E/Qv6jydRgZK8fyO3Wu9Z+WXbQm7cjqlt3kU7wMTCzik82ZX1TKORBp1IlWK50rm9zaulPjrbioTwSxzNVWHu66BhPPiePbWGzXPjyYG6sSTzpa+pS5nUwMJzwLxVYw34RtOzWo8pXQm+H9jSulaI8YGbreJT8xutXFxvZdgWPnO0Ft/9Zx462HgUQPxbn3G9vUwcFV8sbgkH895hTiWxI+KLxb7lOP5YFAD0Rbcwqm+/twytXC6qYFR8cXidgUmelF/yewPVeJDeBGIP83NpmD8o4rrXBXJvUB8ASOBgYQxfMvgX5YMTOJfBry0Rl4nOdHpeStnYAJ/MqBlHKwp3h0nVN8VVnG838AYvmbE27jQULw7rmc4f+ikLCWdNX2XaYSHA4qX4rmIkYSZQHzO4B+mvamay/A/+Q/8BGCurC+jAQAAAABJRU5ErkJggg==) no-repeat center;background-size: .32rem .3rem;}
+.select-date .date-form{margin: .5rem 0;}
+.select-date .date-form .input-box{display: flex;justify-content: center;align-items: center;line-height: .72rem;height: .72rem;}
+.select-date .date-form .input-box input{width: 2.8rem;flex: auto;background-color: transparent;border-bottom: .02rem solid #00d5b9;height: 100%;color:#00d5b9;}
+.select-date .date-form .input-box span{margin: 0 .1rem;}
+.select-date .date-form .date-scroll{display: flex;justify-content: space-around;padding: .4rem;height: 2.96rem;}
+.select-date .date-form .date-scroll .item{height: 100%;width: 1.4rem;overflow: hidden;position: relative;margin: 0 .2rem}
+.select-date .date-form .date-scroll .item:before,.select-date .date-form .date-scroll .item:after{content: '';width: 100%;position: absolute;top: 33%;left: 0;height: 0;border-bottom: 1px solid #687079;}
+.select-date .date-form .date-scroll .item:after{top: 66%;}
+.select-date .date-form .date-scroll .item::-webkit-scrollbar{display: none}
+.select-date .date-form .date-scroll .item .box{transform: translateY(0)}
+.select-date .date-form .date-scroll .item .col{color: #687079;height: 1rem;line-height: 1rem}
+.select-date .date-form .date-scroll .item .col.active{color: #00d5b9}
+.select-date .date-form .btn{padding: 0 .05rem;font-size: 0}
+.select-date .date-form .btn .button{display: inline-block;width: 1.6rem;height: .6rem;margin: 0 .72rem;border-radius: .04rem;line-height: .6rem;font-size: .28rem;color: #333;}
+.select-date .date-form .btn .button.yes{background-color: #00d5b9;}
+.select-date .date-form .btn .button.no{background-color: #687079;}
+/* select date end */
