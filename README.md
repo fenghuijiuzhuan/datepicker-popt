@@ -8,4 +8,6 @@
 在浏览器中打开html文件即可
 
 效果
-
+<p align='center'>
+<img src='./1RA2GI1S3Q)02L41QPH9JOV.png' title='images' style='max-width:600px'></img>
+</p>
