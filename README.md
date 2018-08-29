@@ -9,5 +9,8 @@
 
 效果
 <p align='center'>
-<img src='./1RA2GI1S3Q)02L41QPH9JOV.png' title='images' style='max-width:600px'></img>
+<img src='./img.png' title='images' style='max-width:600px'></img>
 </p>
+
+支持
+<img src='./zfb.png' title='扫一扫，小额赞赏' style='max-width:600px'></img>
