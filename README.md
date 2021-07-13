@@ -15,4 +15,3 @@
 </p>
 
 ## 感谢您的支持
-<img src='./zfb.png' title='扫一扫，小额赞赏' style='max-width:600px'></img>
